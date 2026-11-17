@@ -44,11 +44,11 @@
 
     <!-- PAGE 0: ENTRY / ACCESS SCREEN -->
     <section id="entry-screen" class="bg-indigo-50/50 border border-indigo-200 rounded-md p-6 md:p-8 shadow-sm">
-      <!-- ABOUT CALC BY SAMEER AHMED INTRO (ONLY ON START PAGE WITH DARK PURPLE/INDIGO OUTLINE) -->
+      <!-- ABOUT INTRO -->
       <div class="bg-indigo-50/40 border-2 border-indigo-700 rounded-md p-5 md:p-6 mb-6 space-y-2">
-        <h2 class="text-lg font-bold text-slate-900">About Calc by Sameer Ahmed</h2>
+        <h2 class="text-lg font-bold text-slate-900">About Student Academic Toolkit</h2>
         <p class="text-base text-slate-700 leading-relaxed">
-          I created Calc by Sameer Ahmed to bring together useful mathematical tools for Economics, Computer Science, and Data Science students in one simple website. The idea was to make common calculations easier, save students time, and help university students in Pakistan with their academic work.
+          Brought together as a public utility for Economics, Computer Science, and Data Science students in one simple platform. Designed to make common calculations easier, save students time, and help university and college students across Pakistan with their academic work.
         </p>
         <p class="text-base text-slate-700 leading-relaxed">
           The website includes five calculators, each designed to solve different types of mathematical and academic problems.
@@ -111,9 +111,9 @@
               required
               class="w-full border border-indigo-300 bg-white rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-indigo-600"
             >
-              <option value="LUMS">LUMS</option>
-              <option value="AKU">AKU</option>
-              <option value="JSMU">JSMU</option>
+              <option value="University of Karachi">University of Karachi</option>
+              <option value="NUST">NUST</option>
+              <option value="FAST-NUCES">FAST-NUCES</option>
               <option value="IBA">IBA</option>
               <option value="Other">Other</option>
             </select>
@@ -666,7 +666,7 @@
       return colors[key];
     }
 
-    // --- ORDINAL HELPER FOR 1st, 2nd, 3rd, 4th... ---
+    // --- ORDINAL HELPER ---
     function getOrdinal(n) {
       const mod100 = n % 100;
       if (mod100 >= 11 && mod100 <= 13) {
@@ -1037,7 +1037,7 @@
         balochistan: { baseMoney: 0.9, baseDisplaced: 200000, baseRebuild: 0.7 }
       };
 
-      const m = regionMultipliers[region];
+      const m = regionMultipliers[region] || regionMultipliers.sindh;
       const factor = (rain / 100) * (cropDamage / 45);
 
       const moneyLost = (m.baseMoney * factor).toFixed(2) + " Billion PKR";
@@ -1049,7 +1049,7 @@
       document.getElementById("econ-rebuild").textContent = rebuild;
     }
 
-    // --- EVENT LISTENERS FOR ENTER KEY ---
+    // --- EVENT LISTENERS ---
     window.addEventListener("DOMContentLoaded", () => {
       renderCourses();
 
