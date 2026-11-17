@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calc by Sameer Ahmed | Econ, CS & Data Science Toolkit</title>
-  <meta name="description" content="Calc by Sameer Ahmed (An interdisciplinary Economics, Computer Science, and Data Science web application featuring AP & GP, Simple, Statistics, GPA, and Economic Calculator.") />
+  <meta name="description" content="Calc by Sameer Ahmed, an interdisciplinary Econ, CS, and Data Science web application featuring AP & GP, Simple, Statistics, GPA, and Economic Calculator." />
   <meta name="author" content="Sameer Ahmed" />
   <meta property="og:title" content="Calc by Sameer Ahmed" />
-  <meta property="og:description" content="AP & GP Series Calculator, Simple Calculator, Statistics Calculator, GPA Calculator, and Economic Calculator." />
+  <meta property="og:description" content="AP & GP Sequences & Series Calculator, Simple Calculator, Statistics Calculator, GPA Calculator, and Economic Calculator." />
   <meta property="og:type" content="website" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -44,6 +44,17 @@
 
     <!-- PAGE 0: ENTRY / ACCESS SCREEN -->
     <section id="entry-screen" class="bg-indigo-50/50 border border-indigo-200 rounded-md p-6 md:p-8 shadow-sm">
+      <!-- ABOUT CALC BY SAMEER AHMED INTRO (ONLY ON START PAGE WITH DARK PURPLE/INDIGO OUTLINE) -->
+      <div class="bg-indigo-50/40 border-2 border-indigo-700 rounded-md p-5 md:p-6 mb-6 space-y-2">
+        <h2 class="text-lg font-bold text-slate-900">About Calc by Sameer Ahmed</h2>
+        <p class="text-base text-slate-700 leading-relaxed">
+          I created Calc by Sameer Ahmed to bring together useful mathematical tools for Economics, Computer Science, and Data Science students in one simple website. The idea was to make common calculations easier, save students time, and help university students in Pakistan with their academic work.
+        </p>
+        <p class="text-base text-slate-700 leading-relaxed">
+          The website includes five calculators, each designed to solve different types of mathematical and academic problems.
+        </p>
+      </div>
+
       <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-indigo-200 pb-5 mb-6">
         <div>
           <h2 class="text-lg font-bold text-slate-900 leading-snug">
@@ -76,7 +87,7 @@
               placeholder="Enter your full name"
               class="w-full border border-indigo-300 bg-white rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-indigo-600"
             />
-            <p class="text-xs text-slate-600 mt-1">Instruction: Enter your full legal or student name.</p>
+            <p class="text-xs text-slate-600 mt-1">Instruction: Enter your name here.</p>
           </div>
 
           <!-- Email -->
@@ -89,7 +100,7 @@
               placeholder="Enter your email address"
               class="w-full border border-indigo-300 bg-white rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-indigo-600"
             />
-            <p class="text-xs text-slate-600 mt-1">Instruction: Enter an active university or personal email address.</p>
+            <p class="text-xs text-slate-600 mt-1">Instruction: Enter an active university or personal own email address.</p>
           </div>
 
           <!-- University -->
@@ -106,7 +117,7 @@
               <option value="IBA">IBA</option>
               <option value="Other">Other</option>
             </select>
-            <p class="text-xs text-slate-600 mt-1">Instruction: Select your institution or Other.</p>
+            <p class="text-xs text-slate-600 mt-1">Instruction: Please select university/college.</p>
           </div>
 
           <!-- Semester -->
@@ -171,7 +182,7 @@
           onclick="switchTab('apgp')"
           class="border border-sky-300 bg-sky-200 text-slate-900 text-xs sm:text-sm font-semibold py-2.5 px-3 text-left rounded transition-colors cursor-pointer"
         >
-          1. AP & GP Calculator
+          AP & GP Calculator
         </button>
         <button
           type="button"
@@ -179,7 +190,7 @@
           onclick="switchTab('simple')"
           class="border border-violet-200 bg-violet-50 text-slate-800 text-xs sm:text-sm font-semibold py-2.5 px-3 text-left rounded hover:bg-violet-100 transition-colors cursor-pointer"
         >
-          2. Simple Calculator
+          Simple Calculator
         </button>
         <button
           type="button"
@@ -187,7 +198,7 @@
           onclick="switchTab('stats')"
           class="border border-teal-200 bg-teal-50 text-slate-800 text-xs sm:text-sm font-semibold py-2.5 px-3 text-left rounded hover:bg-teal-100 transition-colors cursor-pointer"
         >
-          3. Statistics Calculator
+          Statistics Calculator
         </button>
         <button
           type="button"
@@ -195,7 +206,7 @@
           onclick="switchTab('gpa')"
           class="border border-emerald-200 bg-emerald-50 text-slate-800 text-xs sm:text-sm font-semibold py-2.5 px-3 text-left rounded hover:bg-emerald-100 transition-colors cursor-pointer"
         >
-          4. GPA Calculator
+          GPA Calculator
         </button>
         <button
           type="button"
@@ -203,24 +214,24 @@
           onclick="switchTab('econ')"
           class="border border-amber-200 bg-amber-50 text-slate-800 text-xs sm:text-sm font-semibold py-2.5 px-3 text-left rounded hover:bg-amber-100 transition-colors cursor-pointer"
         >
-          5. Economic Calculator
+          Economic Calculator
         </button>
       </nav>
 
-      <!-- FOLDER 1: AP / GP CALCULATOR -->
+      <!-- FOLDER 1: AP & GP SEQUENCES & SERIES CALCULATOR -->
       <div id="view-apgp" class="bg-sky-50/60 border border-sky-200 rounded-md p-6 shadow-sm space-y-6">
         <div class="border-b border-sky-200 pb-4 bg-sky-100/70 p-4 rounded">
-          <h2 class="text-xl font-bold text-slate-900">AP / GP Calculator</h2>
+          <h2 class="text-xl font-bold text-slate-900">AP & GP Sequences & Series Calculator</h2>
           <p class="text-xs text-sky-900 mt-1">
-            Find any terms or the sum of the series in AP and GP
+            Find any term of an Arithmetic or Geometric sequence, or the sum of their series.
           </p>
         </div>
 
-        <!-- ARITHMETIC PROGRESSION (AP) BOX -->
+        <!-- ARITHMETIC CALCULATION BOX -->
         <div class="border border-sky-200 bg-sky-100/40 rounded p-5 space-y-4">
           <div class="inline-block border border-sky-400 bg-sky-200/80 px-3.5 py-2 rounded">
             <h3 class="text-sm font-bold text-slate-900">
-              Finding the 'nth' term of the Arithmetic series
+              Arithmetic Calculation
             </h3>
           </div>
 
@@ -234,32 +245,35 @@
               <input type="number" id="ap-d" placeholder="Enter difference" step="any" class="w-full border border-sky-300 bg-white rounded px-3 py-2 text-sm text-slate-900" />
             </div>
             <div class="bg-sky-100/60 border border-sky-200 rounded p-3">
-              <label for="ap-n" class="block text-xs font-semibold text-slate-800 mb-1">Term Position / Count (n)</label>
+              <label for="ap-n" class="block text-xs font-semibold text-slate-800 mb-1">Term Position / Number of Terms (n)</label>
               <input type="number" id="ap-n" placeholder="Enter n" min="1" step="1" class="w-full border border-sky-300 bg-white rounded px-3 py-2 text-sm text-slate-900" />
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-3">
-            <button type="button" onclick="calculateAP()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Calculate AP (=)
+            <button type="button" onclick="calculateAPProg()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
+              Calculate Progression
+            </button>
+            <button type="button" onclick="calculateAPSer()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
+              Calculate Series
             </button>
             <button type="button" onclick="clearAP()" class="border border-sky-300 bg-sky-100 hover:bg-sky-200 text-slate-800 text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Clear data &amp; try another values
+              Clear data and try other values
             </button>
           </div>
 
           <div class="bg-sky-100/80 border border-sky-200 rounded p-4 space-y-1.5 text-sm text-slate-900">
-            <p id="ap-term-note">Enter your values above and click <strong>Calculate AP (=)</strong> to see the nth term.</p>
-            <p id="ap-sum-note">Enter your values above and click <strong>Calculate AP (=)</strong> to see the sum of the series.</p>
-            <p id="ap-series-note"></p>
+            <p id="ap-prog-term-note">Enter your values above and choose whether you want to solve for progression or series.</p>
+            <p id="ap-ser-sum-note"></p>
+            <p id="ap-ser-series-note"></p>
           </div>
         </div>
 
-        <!-- GEOMETRIC PROGRESSION (GP) BOX -->
+        <!-- GEOMETRIC CALCULATION BOX -->
         <div class="border border-sky-200 bg-sky-100/40 rounded p-5 space-y-4">
           <div class="inline-block border border-sky-400 bg-sky-200/80 px-3.5 py-2 rounded">
             <h3 class="text-sm font-bold text-slate-900">
-              Finding the 'nth' term of the Geometric series
+              Geometric Calculation
             </h3>
           </div>
 
@@ -273,25 +287,34 @@
               <input type="number" id="gp-r" placeholder="Enter ratio" step="any" class="w-full border border-sky-300 bg-white rounded px-3 py-2 text-sm text-slate-900" />
             </div>
             <div class="bg-sky-100/60 border border-sky-200 rounded p-3">
-              <label for="gp-n" class="block text-xs font-semibold text-slate-800 mb-1">Term Position / Count (n)</label>
+              <label for="gp-n" class="block text-xs font-semibold text-slate-800 mb-1">Term Position / Number of Terms (n)</label>
               <input type="number" id="gp-n" placeholder="Enter n" min="1" step="1" class="w-full border border-sky-300 bg-white rounded px-3 py-2 text-sm text-slate-900" />
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-3">
-            <button type="button" onclick="calculateGP()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Calculate GP (=)
+            <button type="button" onclick="calculateGPProg()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
+              Calculate Progression
+            </button>
+            <button type="button" onclick="calculateGPSer()" class="border border-sky-700 bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
+              Calculate Series
             </button>
             <button type="button" onclick="clearGP()" class="border border-sky-300 bg-sky-100 hover:bg-sky-200 text-slate-800 text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Clear data &amp; try another values
+              Clear data and try other values
             </button>
           </div>
 
           <div class="bg-sky-100/80 border border-sky-200 rounded p-4 space-y-1.5 text-sm text-slate-900">
-            <p id="gp-term-note">Enter your values above and click <strong>Calculate GP (=)</strong> to see the nth term.</p>
-            <p id="gp-sum-note">Enter your values above and click <strong>Calculate GP (=)</strong> to see the sum of the series.</p>
-            <p id="gp-series-note"></p>
+            <p id="gp-prog-term-note">Enter your values above and choose whether you want to solve for progression or series.</p>
+            <p id="gp-ser-sum-note"></p>
+            <p id="gp-ser-inf-note"></p>
+            <p id="gp-ser-series-note"></p>
           </div>
+        </div>
+
+        <div class="border-t border-sky-200 pt-4 text-sm text-slate-700">
+          <p class="font-semibold text-slate-900 text-center">Computer Science: AP &amp; GP Calculator</p>
+          <p class="mt-1">This tool quickly solves number patterns and sequences. It shows how computers use logic, repeat steps, and follow instructions.</p>
         </div>
       </div>
 
@@ -343,8 +366,13 @@
 
         <div class="text-center pt-2">
           <button type="button" onclick="clearSimplePhone()" class="border border-violet-300 bg-violet-100 hover:bg-violet-200 text-slate-800 text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-            Clear data &amp; try another values
+            Clear data and try other values
           </button>
+        </div>
+
+        <div class="border-t border-violet-200 pt-4 text-sm text-slate-700">
+          <p class="font-semibold text-slate-900 text-center">Economics: Simple Calculator</p>
+          <p class="mt-1">This tool performs basic mathematical calculations quickly. It helps students solve numerical problems commonly used in Economics and other subjects.</p>
         </div>
       </div>
 
@@ -366,7 +394,7 @@
               placeholder="e.g., 12, 15, 18, 22, 22, 25, 30, 45"
               class="w-full border border-teal-300 bg-white rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-teal-600"
             ></textarea>
-            <p class="text-xs text-slate-600 mt-1">Please input the values and select '=' to get result.</p>
+            <p class="text-xs text-slate-600 mt-1">Please enter your dataset above and click Calculate Statistics to get your results!</p>
           </div>
 
           <div class="flex flex-wrap items-center gap-3">
@@ -375,7 +403,7 @@
               onclick="calculateStats()"
               class="border border-teal-800 bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer"
             >
-              Calculate Statistics (=)
+              Calculate Statistics
             </button>
             <button
               type="button"
@@ -402,6 +430,11 @@
           <div class="border border-teal-200 bg-teal-100/70 rounded p-3 text-sm"><strong>Sample Variance (s²):</strong> <span id="stat-var-sample">—</span></div>
           <div class="border border-teal-200 bg-teal-100/70 rounded p-3 sm:col-span-2 lg:col-span-3"><strong>Quartiles (Q1 | Q3 | IQR):</strong> <span id="stat-iqr">—</span></div>
         </div>
+
+        <div class="border-t border-teal-200 pt-4 text-sm text-slate-700">
+          <p class="font-semibold text-slate-900 text-center">Data Science: Statistics Calculator</p>
+          <p class="mt-1">This tool quickly calculates averages and other important values from a set of numbers. It helps make large data easier to understand and find useful information.</p>
+        </div>
       </div>
 
       <!-- FOLDER 4: GPA CALCULATOR -->
@@ -426,14 +459,14 @@
         <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
           <div class="flex flex-wrap items-center gap-2">
             <button type="button" onclick="calculateGPA()" class="border border-emerald-800 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Calculate GPA (=)
+              Calculate GPA
             </button>
             <button type="button" onclick="addCourseRow()" class="border border-emerald-300 bg-emerald-100 hover:bg-emerald-200 text-emerald-950 text-xs font-semibold px-4 py-2 rounded cursor-pointer">
               + Add Course
             </button>
           </div>
           <button type="button" onclick="resetCourses()" class="border border-emerald-300 bg-emerald-100 hover:bg-emerald-200 text-slate-800 text-xs font-medium px-3 py-2 rounded cursor-pointer">
-            Clear data &amp; try another values
+            Clear data and try other values
           </button>
         </div>
 
@@ -446,6 +479,11 @@
             <span class="block text-xs text-emerald-900 font-medium">Predicted Semester GPA (4.00 Scale)</span>
             <span id="gpa-result" class="text-2xl font-bold text-slate-900 mt-1 block">—</span>
           </div>
+        </div>
+
+        <div class="border-t border-emerald-200 pt-4 text-sm text-slate-700">
+          <p class="font-semibold text-slate-900 text-center">Economics: GPA Calculator</p>
+          <p class="mt-1">This tool helps students calculate their Grade Point Average (GPA). It makes it easier to track academic performance and understand their results.</p>
         </div>
       </div>
 
@@ -487,7 +525,7 @@
 
           <div class="pt-1">
             <button type="button" onclick="calculateFloodLoss()" class="border border-amber-800 bg-amber-700 hover:bg-amber-800 text-white text-xs font-semibold px-4 py-2 rounded cursor-pointer">
-              Calculate Flood &amp; Farm Loss (=)
+              Calculate Flood &amp; Farm Loss
             </button>
           </div>
         </div>
@@ -524,6 +562,11 @@
               <strong>What This Shows:</strong> When floods hit rural areas, farmers lose their crops and animals first, which cuts family income and pushes up food prices.
             </p>
           </div>
+        </div>
+
+        <div class="border-t border-amber-200 pt-4 text-sm text-slate-700">
+          <p class="font-semibold text-slate-900 text-center">Economics: Economic Calculator</p>
+          <p class="mt-1">This tool calculates how much money and damage floods cause to farms and villages.</p>
         </div>
       </div>
 
@@ -623,67 +666,136 @@
       return colors[key];
     }
 
-    // --- AP & GP LOGIC ---
-    function calculateAP() {
+    // --- ORDINAL HELPER FOR 1st, 2nd, 3rd, 4th... ---
+    function getOrdinal(n) {
+      const mod100 = n % 100;
+      if (mod100 >= 11 && mod100 <= 13) {
+        return n + "th";
+      }
+      const mod10 = n % 10;
+      if (mod10 === 1) return n + "st";
+      if (mod10 === 2) return n + "nd";
+      if (mod10 === 3) return n + "rd";
+      return n + "th";
+    }
+
+    function formatNum(num) {
+      if (!Number.isFinite(num)) return "Undefined (Overflow)";
+      return Number.isInteger(num) ? num.toString() : parseFloat(num.toFixed(6)).toString();
+    }
+
+    // --- ARITHMETIC CALCULATION LOGIC ---
+    function calculateAPProg() {
       const a = parseFloat(document.getElementById("ap-a").value);
       const d = parseFloat(document.getElementById("ap-d").value);
       const n = parseInt(document.getElementById("ap-n").value, 10);
 
       if (isNaN(a) || isNaN(d) || isNaN(n) || n < 1) {
-        alert("Please enter valid numbers for AP (n must be >= 1).");
+        alert("Please enter valid numbers for Arithmetic Calculation (n must be >= 1).");
         return;
       }
 
       const nthTerm = a + (n - 1) * d;
+      let preview = [];
+      for (let i = 0; i < n; i++) {
+        preview.push(formatNum(a + i * d));
+      }
+
+      document.getElementById("ap-prog-term-note").innerHTML = `The ${getOrdinal(n)} term is <strong>${formatNum(nthTerm)}</strong>. Sequence preview: [${preview.join(", ")}]`;
+      document.getElementById("ap-ser-sum-note").textContent = "";
+      document.getElementById("ap-ser-series-note").textContent = "";
+    }
+
+    function calculateAPSer() {
+      const a = parseFloat(document.getElementById("ap-a").value);
+      const d = parseFloat(document.getElementById("ap-d").value);
+      const n = parseInt(document.getElementById("ap-n").value, 10);
+
+      if (isNaN(a) || isNaN(d) || isNaN(n) || n < 1) {
+        alert("Please enter valid numbers for Arithmetic Calculation (n must be >= 1).");
+        return;
+      }
+
       const sum = (n / 2) * (2 * a + (n - 1) * d);
       let preview = [];
       for (let i = 0; i < n; i++) {
-        preview.push(Number((a + i * d).toFixed(4)));
+        preview.push(formatNum(a + i * d));
       }
 
-      document.getElementById("ap-term-note").textContent = `The ${n}th term of the series is ${nthTerm}`;
-      document.getElementById("ap-sum-note").textContent = `The sum of the ${n} terms is ${sum}`;
-      document.getElementById("ap-series-note").textContent = `The series of the ${n} terms is : ${preview.join(", ")}`;
+      document.getElementById("ap-prog-term-note").textContent = "";
+      document.getElementById("ap-ser-sum-note").textContent = n === 1 ? `The sum of the 1 term is ${formatNum(sum)}` : `The sum of the ${n} terms is ${formatNum(sum)}`;
+      document.getElementById("ap-ser-series-note").textContent = n === 1 ? `The series of the 1 term is : ${preview.join(", ")}` : `The series of the ${n} terms is : ${preview.join(", ")}`;
     }
 
     function clearAP() {
       document.getElementById("ap-a").value = "";
       document.getElementById("ap-d").value = "";
       document.getElementById("ap-n").value = "";
-      document.getElementById("ap-term-note").innerHTML = `Enter your values above and click <strong>Calculate AP (=)</strong> to see the nth term.`;
-      document.getElementById("ap-sum-note").innerHTML = `Enter your values above and click <strong>Calculate AP (=)</strong> to see the sum of the series.`;
-      document.getElementById("ap-series-note").textContent = "";
+      document.getElementById("ap-prog-term-note").innerHTML = `Enter your values above and choose whether you want to solve for progression or series.`;
+      document.getElementById("ap-ser-sum-note").textContent = "";
+      document.getElementById("ap-ser-series-note").textContent = "";
     }
 
-    function calculateGP() {
+    // --- GEOMETRIC CALCULATION LOGIC ---
+    function calculateGPProg() {
       const a = parseFloat(document.getElementById("gp-a").value);
       const r = parseFloat(document.getElementById("gp-r").value);
       const n = parseInt(document.getElementById("gp-n").value, 10);
 
       if (isNaN(a) || isNaN(r) || isNaN(n) || n < 1) {
-        alert("Please enter valid numbers for GP (n must be >= 1).");
+        alert("Please enter valid numbers for Geometric Calculation (n must be >= 1).");
         return;
       }
 
       const nthTerm = a * Math.pow(r, n - 1);
+      let preview = [];
+      for (let i = 0; i < n; i++) {
+        preview.push(formatNum(a * Math.pow(r, i)));
+      }
+
+      document.getElementById("gp-prog-term-note").innerHTML = `The ${getOrdinal(n)} term is <strong>${formatNum(nthTerm)}</strong>. Sequence preview: [${preview.join(", ")}]`;
+      document.getElementById("gp-ser-sum-note").textContent = "";
+      document.getElementById("gp-ser-inf-note").textContent = "";
+      document.getElementById("gp-ser-series-note").textContent = "";
+    }
+
+    function calculateGPSer() {
+      const a = parseFloat(document.getElementById("gp-a").value);
+      const r = parseFloat(document.getElementById("gp-r").value);
+      const n = parseInt(document.getElementById("gp-n").value, 10);
+
+      if (isNaN(a) || isNaN(r) || isNaN(n) || n < 1) {
+        alert("Please enter valid numbers for Geometric Calculation (n must be >= 1).");
+        return;
+      }
+
       const sum = r === 1 ? a * n : a * (Math.pow(r, n) - 1) / (r - 1);
       let preview = [];
       for (let i = 0; i < n; i++) {
-        preview.push(Number((a * Math.pow(r, i)).toFixed(4)));
+        preview.push(formatNum(a * Math.pow(r, i)));
       }
 
-      document.getElementById("gp-term-note").textContent = `The ${n}th term of the series is ${nthTerm}`;
-      document.getElementById("gp-sum-note").textContent = `The sum of the ${n} terms is ${sum}`;
-      document.getElementById("gp-series-note").textContent = `The series of the ${n} terms is : ${preview.join(", ")}`;
+      document.getElementById("gp-prog-term-note").textContent = "";
+      document.getElementById("gp-ser-sum-note").textContent = n === 1 ? `The sum of the 1 term is ${formatNum(sum)}` : `The sum of the ${n} terms is ${formatNum(sum)}`;
+      
+      if (Math.abs(r) < 1) {
+        const sumInf = a / (1 - r);
+        document.getElementById("gp-ser-inf-note").textContent = `Sum to infinity (S∞): ${formatNum(sumInf)}`;
+      } else {
+        document.getElementById("gp-ser-inf-note").textContent = `Sum to infinity (S∞): Not applicable (|r| >= 1)`;
+      }
+
+      document.getElementById("gp-ser-series-note").textContent = n === 1 ? `The series of the 1 term is : ${preview.join(", ")}` : `The series of the ${n} terms is : ${preview.join(", ")}`;
     }
 
     function clearGP() {
       document.getElementById("gp-a").value = "";
       document.getElementById("gp-r").value = "";
       document.getElementById("gp-n").value = "";
-      document.getElementById("gp-term-note").innerHTML = `Enter your values above and click <strong>Calculate GP (=)</strong> to see the nth term.`;
-      document.getElementById("gp-sum-note").innerHTML = `Enter your values above and click <strong>Calculate GP (=)</strong> to see the sum of the series.`;
-      document.getElementById("gp-series-note").textContent = "";
+      document.getElementById("gp-prog-term-note").innerHTML = `Enter your values above and choose whether you want to solve for progression or series.`;
+      document.getElementById("gp-ser-sum-note").textContent = "";
+      document.getElementById("gp-ser-inf-note").textContent = "";
+      document.getElementById("gp-ser-series-note").textContent = "";
     }
 
     // --- SIMPLE CALCULATOR LOGIC ---
@@ -873,22 +985,30 @@
     }
 
     function calculateGPA() {
-      const names = document.querySelectorAll(".course-name");
       const creds = document.querySelectorAll(".course-cred");
       const grades = document.querySelectorAll(".course-grade");
+
+      if (creds.length === 0) {
+        alert("Please add at least one course with 1 or more credit hours.");
+        return;
+      }
 
       let totalCredits = 0;
       let totalPoints = 0;
 
       for (let i = 0; i < creds.length; i++) {
-        const cr = parseInt(creds[i].value, 10) || 0;
+        const cr = parseInt(creds[i].value, 10);
+        if (isNaN(cr) || cr <= 0) {
+          alert("Please enter valid credit hours (1 or more) for all courses.");
+          return;
+        }
         const gr = parseFloat(grades[i].value) || 0;
         totalCredits += cr;
         totalPoints += (cr * gr);
       }
 
       if (totalCredits === 0) {
-        alert("Total credit hours cannot be zero.");
+        alert("Please add at least one course with 1 or more credit hours.");
         return;
       }
 
@@ -929,9 +1049,37 @@
       document.getElementById("econ-rebuild").textContent = rebuild;
     }
 
-    // Initialize GPA rows on load
+    // --- EVENT LISTENERS FOR ENTER KEY ---
     window.addEventListener("DOMContentLoaded", () => {
       renderCourses();
+
+      ["ap-a", "ap-d", "ap-n"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") calculateAPProg();
+          });
+        }
+      });
+
+      ["gp-a", "gp-r", "gp-n"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") calculateGPProg();
+          });
+        }
+      });
+
+      const statsInput = document.getElementById("stats-input");
+      if (statsInput) {
+        statsInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            calculateStats();
+          }
+        });
+      }
     });
   </script>
 </body>
